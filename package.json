@@ -1,0 +1,22 @@
+{
+  "name": "cesar-melia-api",
+  "version": "1.0.0",
+  "description": "API with all projects created by Cesar melia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "api",
+    "cesar",
+    "melia"
+  ],
+  "author": "Cesar Melia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
