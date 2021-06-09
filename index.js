@@ -1,9 +1,11 @@
 const express = require("express");
 
 const db = require("./db.js");
+db.connect();
+
 const Project = require("./models/Project.model");
 
-const PORT = 4500;
+const PORT = 4000;
 
 server = express();
 
@@ -14,17 +16,15 @@ router.get("/", (req, res) => {
 });
 
 router.get("/projects", async (req, res) => {
-    const { name } = req.query;
-    const { date } = req.query;
-    const { type } = req.query;
-    const { technologies } = req.query;
-    const { isPublic } = req.query;
+    const { name, date, type, technologies, isPublic } = req.query;
 
     if (!name && !date && !type && !technologies && !isPublic) {
         try {
             const projects = await Project.find();
+            console.log(projects);
             return res.status(200).json(projects);
         } catch (error) {
+            console.log("catch error", error);
             return res.status(500).json(error);
         }
     }
@@ -80,13 +80,13 @@ router.get("/projects/:name", async (req, res) => {
         const { name } = req.params;
         const projects = await Project.find({ name: name });
         return res.status(200).json(projects);
-    } catch {
+    } catch (error) {
         return res.status(500).json(error);
     }
 });
 
-sever.use("/", router);
+server.use("/", router);
 
-server.lsten(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server listening in port: ${PORT}`);
 });

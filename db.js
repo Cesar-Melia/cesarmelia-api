@@ -6,10 +6,10 @@ const connect = () => {
     mongoose
         .connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((res) => {
-            console.log("Conectado a la base de datos");
+            console.log("Connected to the database");
         })
         .catch((error) => {
-            console.log("Ha ocurrido un error conectando a la base de datos", error);
+            console.log("A problem occurred while connecting to the database", error);
         });
 };
 
