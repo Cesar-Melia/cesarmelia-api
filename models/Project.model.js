@@ -12,9 +12,10 @@ const projectSchema = new Schema(
         url: { type: String },
         repoUrl: { type: String },
         description: { type: String, required: true },
+        imgUrl: { type: String },
     },
     {
-        timestamp: true,
+        timestamps: true,
     }
 );
 
