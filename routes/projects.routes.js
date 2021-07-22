@@ -4,6 +4,7 @@ const router = express.Router();
 const {
   getProjects,
   getProjectsById,
+  createProjectPost,
 } = require('../controllers/projects.controllers.js');
 
 router.get('/', getProjects);
@@ -11,42 +12,7 @@ router.get('/', getProjects);
 router.get('/:_id', getProjectsById);
 
 /////////////////////////////////////////////////////////////////
-router.post('/create', async (req, res, next) => {
-  try {
-    console.log('entra a post', req.body);
-
-    const {
-      name,
-      date,
-      type,
-      technologies,
-      isPublic,
-      url,
-      repoUrl,
-      description,
-      imgUrl,
-    } = req.body;
-
-    console.log(name);
-    const newProject = new Project({
-      name,
-      date,
-      type,
-      technologies,
-      isPublic,
-      url,
-      repoUrl,
-      description,
-      imgUrl,
-    });
-
-    const createdProject = await newProject.save();
-
-    return res.status(201).json(createdProject);
-  } catch (error) {
-    return next(error);
-  }
-});
+router.post('/create', createProjectPost);
 
 /////////////////////////////////////////////////////////////////
 router.put('/edit', async (req, res, next) => {

@@ -68,4 +68,38 @@ const getProjectsById = async (req, res) => {
   }
 };
 
-module.exports = { getProjects, getProjectsById };
+const createProjectPost = async (req, res, next) => {
+  try {
+    const {
+      name,
+      date,
+      type,
+      technologies,
+      isPublic,
+      url,
+      repoUrl,
+      description,
+      imgUrl,
+    } = req.body;
+
+    const newProject = new Project({
+      name,
+      date,
+      type,
+      technologies,
+      isPublic,
+      url,
+      repoUrl,
+      description,
+      imgUrl,
+    });
+
+    const createdProject = await newProject.save();
+
+    return res.status(201).json(createdProject);
+  } catch (error) {
+    return next(error);
+  }
+};
+
+module.exports = { getProjects, getProjectsById, createProjectPost };
