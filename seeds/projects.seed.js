@@ -12,7 +12,8 @@ const projectsSeed = [
     url: 'https://github.com/Cesar-Melia/HundirLaFlota',
     repoUrl: 'https://github.com/Cesar-Melia/HundirLaFlota',
     description: 'Game that consists of sinking ships by shooting with coordinates.',
-    imgUrl: '../assets/images/projects/sink-the-float_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/sink-the-float_800_rh9qwj.png',
   },
   {
     name: 'Apple',
@@ -23,7 +24,8 @@ const projectsSeed = [
     url: 'https://apple-front.netlify.app/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/web_apple',
     description: 'Apple frontpage',
-    imgUrl: '../assets/images/projects/apple_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/apple_800_tkw8eu.png',
   },
   {
     name: 'Memory',
@@ -35,7 +37,8 @@ const projectsSeed = [
     repoUrl: 'https://gitlab.com/Cesar-Melia/memory_game',
     description:
       'Game that consists of discovering pairs of cards with the same drawing.',
-    imgUrl: '../assets/images/projects/memory_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/memory_800_yedesj.png',
   },
   {
     name: 'Calculator',
@@ -46,7 +49,8 @@ const projectsSeed = [
     url: 'https://calculator-proj.netlify.app/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/calculator',
     description: 'Reply of Iphone calculator',
-    imgUrl: '../assets/images/projects/calculator_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/calculator_800_eywmqz.png',
   },
   {
     name: 'Whac a whole',
@@ -57,7 +61,8 @@ const projectsSeed = [
     url: 'https://whac-a-whole-proj.netlify.app/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/whac_a_whole_game',
     description: 'Classic game in which you have to hunt the mole.',
-    imgUrl: '../assets/images/projects/whac-a-mole_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/whac-a-mole_800_d7bok2.png',
   },
   {
     name: 'Who is who',
@@ -69,7 +74,8 @@ const projectsSeed = [
     repoUrl: 'https://gitlab.com/Cesar-Melia/who_is_who_game',
     description:
       'Game that consists of guessing which of all the characters is the chosen one by asking different questions.',
-    imgUrl: '../assets/images/projects/who-is-who_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/who-is-who_800_iwejk6.png',
   },
   {
     name: 'Shopeame',
@@ -80,7 +86,8 @@ const projectsSeed = [
     url: 'https://shopeame-proj.netlify.app/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/shopeame',
     description: 'Web with product gallery and API management panel.',
-    imgUrl: '../assets/images/projects/shopeame_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/shopeame_800_exoy0x.png',
   },
   {
     name: 'Quiz Game',
@@ -91,7 +98,8 @@ const projectsSeed = [
     url: 'https://quiz-game-proj.netlify.app/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/quiz-game',
     description: 'Quiz Game with multiple options to configure the question type.',
-    imgUrl: '../assets/images/projects/quiz_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/quiz_800_iizzb4.png',
   },
   {
     name: 'Rick and Morty',
@@ -103,7 +111,8 @@ const projectsSeed = [
     repoUrl: 'https://gitlab.com/Cesar-Melia/rick-and-morty-web',
     description:
       'Rick and Morty website with all the info about this cartoons TV program.',
-    imgUrl: '../assets/images/projects/rick_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/rick_800_qooblo.png',
   },
   {
     name: 'Game of Thrones',
@@ -124,7 +133,8 @@ const projectsSeed = [
     repoUrl: 'https://gitlab.com/Cesar-Melia/game-of-thrones',
     description:
       'Website about this TV program with all the info about characters, houses, locations...',
-    imgUrl: '../assets/images/projects/got_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/got_800_ztemvn.png',
   },
   {
     name: 'Personal Web',
@@ -144,7 +154,8 @@ const projectsSeed = [
     url: 'https://cesarmelia.com/',
     repoUrl: 'https://github.com/Cesar-Melia/cesar-melia-web',
     description: 'My personal website',
-    imgUrl: '../assets/images/projects/cesar-melia_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944635/Cesar%20Melia%20Projects/cesar-melia_800_xgpxfb.png',
   },
   {
     name: 'PC Shop API',
@@ -163,7 +174,8 @@ const projectsSeed = [
     url: 'https://pc-shop-node.herokuapp.com/',
     repoUrl: 'https://gitlab.com/Cesar-Melia/pc-shop-backend',
     description: 'PC Shop backend with views.',
-    imgUrl: '../assets/images/projects/pc-shop-back_800.png',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/pc-shop-back_800_zmnfby.png',
   },
 ];
 
