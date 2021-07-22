@@ -1,8 +1,7 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const getIndex = require('../controllers/index.controllers.js');
 
-router.get("/", (req, res) => {
-    return res.send("César Meliá Projects");
-});
+router.get('/', getIndex);
 
 module.exports = router;
