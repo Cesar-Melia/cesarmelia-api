@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors');
+
 const indexRoutes = require('./routes/index.routes');
 const projectsRoutes = require('./routes/projects.routes');
 const db = require('./db.js');
@@ -9,6 +11,13 @@ db.connect();
 const PORT = process.env.PORT || 3500;
 
 server = express();
+
+server.use(
+  cors({
+    origin: ['http://localhost:3500', 'http://localhost:4000', 'http://localhost:4200'],
+    credentials: true,
+  })
+);
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
