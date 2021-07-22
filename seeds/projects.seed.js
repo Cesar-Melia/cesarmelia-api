@@ -158,6 +158,18 @@ const projectsSeed = [
       'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944635/Cesar%20Melia%20Projects/cesar-melia_800_xgpxfb.png',
   },
   {
+    name: 'Personal Web API',
+    date: '2021-06-10',
+    type: 'backend',
+    technologies: ['Node', 'Express', 'MongoDB', 'Javascript'],
+    isPublic: true,
+    url: 'https://github.com/Cesar-Melia/Creek-Finder_backend',
+    repoUrl: 'https://github.com/Cesar-Melia/Creek-Finder_backend',
+    description: 'Personal web API with all my projects.',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944635/Cesar%20Melia%20Projects/cesar-melia_800_xgpxfb.png',
+  },
+  {
     name: 'PC Shop API',
     date: '2021-06-18',
     type: 'backend',
@@ -165,6 +177,7 @@ const projectsSeed = [
       'Node',
       'Express',
       'MongoDB',
+      'Javascript',
       'Handlebars',
       'CSS 3',
       'SASS',
@@ -176,6 +189,37 @@ const projectsSeed = [
     description: 'PC Shop backend with views.',
     imgUrl:
       'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626944636/Cesar%20Melia%20Projects/pc-shop-back_800_zmnfby.png',
+  },
+  {
+    name: 'Personal Blog GraphQL API',
+    date: '2021-07-15',
+    type: 'backend',
+    technologies: [
+      'Node',
+      'Express',
+      'MongoDB',
+      'GraphQL',
+      'Apollo Server',
+      'Javascript',
+    ],
+    isPublic: true,
+    url: 'https://github.com/Cesar-Melia/blog-backend',
+    repoUrl: 'https://github.com/Cesar-Melia/blog-backend',
+    description: 'GraphQL API with all the blog posts.',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626956554/Cesar%20Melia%20Projects/blog_cesar_800_c4pvgo.png',
+  },
+  {
+    name: 'Personal Blog',
+    date: '2021-07-15',
+    type: 'frontend',
+    technologies: ['React', 'Gatsby', 'Javascript', 'HTML', 'SCSS', 'GraphQL'],
+    isPublic: true,
+    url: 'https://cesar-melia-blog.netlify.app/',
+    repoUrl: 'https://github.com/Cesar-Melia/blog-frontend',
+    description: 'GraphQL API with all the blog posts.',
+    imgUrl:
+      'https://res.cloudinary.com/drvdc0bpv/image/upload/v1626956554/Cesar%20Melia%20Projects/blog_cesar_800_c4pvgo.png',
   },
 ];
 

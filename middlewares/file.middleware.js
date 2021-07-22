@@ -1,7 +1,7 @@
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
 
 const VALID_FILE_TYPES = ['image/png', 'image/jpg', 'image/jpeg'];
 
@@ -15,8 +15,10 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  if (!VALIS_FILE_TYPES.includes(file.mimetype)) {
+  console.log('1');
+  if (!VALID_FILE_TYPES.includes(file.mimetype)) {
     const error = new Error('Tipo de archivo inválido. Debe ser .jpg o .png');
+    console.log('2');
 
     return cb(error);
   } else {
@@ -30,19 +32,27 @@ const upload = multer({
 });
 
 const uploadToCloudinary = async (req, res, next) => {
+  console.log('3');
   if (req.file) {
     try {
       const filePath = req.file.path;
 
-      const image = await cloudinary.uploader.upload(filePath);
+      console.log('4', filePath);
+      const image = await cloudinary.uploader.upload(filePath); //////// Falla aquí
+      console.log('5');
+
       await fs.unlinkSync(filePath);
 
-      console.log(iamge);
+      console.log('6');
+
+      console.log(image);
 
       req.fileUrl = image.secure_url;
 
       next();
     } catch (error) {
+      console.log('out');
+
       return next(error);
     }
   } else {

@@ -14,7 +14,7 @@ router.get('/', getProjects);
 
 router.get('/:_id', getProjectsById);
 
-router.post('/create', [upload, uploadToCloudinary], createProjectPost);
+router.post('/create', [upload.single('imgUrl'), uploadToCloudinary], createProjectPost);
 
 router.put('/edit/:_id', editProjectPut);
 
