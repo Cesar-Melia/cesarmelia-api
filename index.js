@@ -14,7 +14,12 @@ server = express();
 
 server.use(
   cors({
-    origin: ['http://localhost:3500', 'http://localhost:4000', 'http://localhost:4200'],
+    origin: [
+      'http://localhost:3500',
+      'http://localhost:4000',
+      'http://localhost:4200',
+      'https://cesarmelia.com',
+    ],
     credentials: true,
   })
 );
