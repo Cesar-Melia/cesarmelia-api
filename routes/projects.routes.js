@@ -5,53 +5,16 @@ const {
   getProjects,
   getProjectsById,
   createProjectPost,
+  editProjectPut,
 } = require('../controllers/projects.controllers.js');
 
 router.get('/', getProjects);
 
 router.get('/:_id', getProjectsById);
 
-/////////////////////////////////////////////////////////////////
 router.post('/create', createProjectPost);
 
-/////////////////////////////////////////////////////////////////
-router.put('/edit', async (req, res, next) => {
-  console.log('entra a put', req.body);
-
-  try {
-    const {
-      _id,
-      name,
-      date,
-      type,
-      technologies,
-      isPublic,
-      url,
-      repoUrl,
-      description,
-      imgUrl,
-    } = req.body;
-
-    const fieldsToUpdate = {};
-    if (name) fieldsToUpdate.name = name;
-    if (date) fieldsToUpdate.date = date;
-    if (type) fieldsToUpdate.type = type;
-    if (technologies) fieldsToUpdate.technologies = technologies;
-    if (isPublic) fieldsToUpdate.isPublic = isPublic;
-    if (url) fieldsToUpdate.url = url;
-    if (repoUrl) fieldsToUpdate.repoUrl = repoUrl;
-    if (description) fieldsToUpdate.description = description;
-    if (imgUrl) fieldsToUpdate.imgUrl = imgUrl;
-
-    const updateProject = await Project.findByIdAndUpdate(_id, fieldsToUpdate, {
-      new: true,
-    });
-
-    return res.status(200).json(updateProject);
-  } catch (error) {
-    next(error);
-  }
-});
+router.put('/edit/:_id', editProjectPut);
 
 router.delete('/:_id', async (req, res, next) => {
   try {

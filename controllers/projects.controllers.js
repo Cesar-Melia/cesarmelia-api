@@ -102,4 +102,43 @@ const createProjectPost = async (req, res, next) => {
   }
 };
 
-module.exports = { getProjects, getProjectsById, createProjectPost };
+const editProjectPut = async (req, res, next) => {
+  console.log('entra a put', req.body);
+
+  const { _id } = req.params;
+
+  try {
+    const {
+      name,
+      date,
+      type,
+      technologies,
+      isPublic,
+      url,
+      repoUrl,
+      description,
+      imgUrl,
+    } = req.body;
+
+    const fieldsToUpdate = {};
+    name && (fieldsToUpdate.name = name);
+    date && (fieldsToUpdate.date = date);
+    type && (fieldsToUpdate.type = type);
+    technologies && (fieldsToUpdate.technologies = technologies);
+    isPublic && (fieldsToUpdate.isPublic = isPublic);
+    url && (fieldsToUpdate.url = url);
+    repoUrl && (fieldsToUpdate.repoUrl = repoUrl);
+    description && (fieldsToUpdate.description = description);
+    imgUrl && (fieldsToUpdate.imgUrl = imgUrl);
+
+    const updateProject = await Project.findByIdAndUpdate(_id, fieldsToUpdate, {
+      new: true,
+    });
+
+    return res.status(200).json(updateProject);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { getProjects, getProjectsById, createProjectPost, editProjectPut };
