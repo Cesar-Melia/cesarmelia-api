@@ -70,17 +70,10 @@ const getProjectsById = async (req, res) => {
 
 const createProjectPost = async (req, res, next) => {
   try {
-    const {
-      name,
-      date,
-      type,
-      technologies,
-      isPublic,
-      url,
-      repoUrl,
-      description,
-      imgUrl,
-    } = req.body;
+    const { name, date, type, technologies, isPublic, url, repoUrl, description } =
+      req.body;
+
+    const imgUrl = req.fileUrl ? req.fileUrl : '';
 
     const newProject = new Project({
       name,
